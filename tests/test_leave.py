@@ -65,6 +65,18 @@ def test_days_mismatch_is_retried(monkeypatch):
     assert r.request.end_date == date(2026, 10, 7)
 
 
+def test_unmentioned_days_number_is_ignored(monkeypatch):
+    calls = scripted(monkeypatch, [as_json(leave_type="annual", start_date="2026-10-20",
+                                           end_date="2026-10-24", days_requested=5,
+                                           reason="family trip")])
+    r = leave.extract("Please book my annual leave from 20 to 24 October for a family trip.",
+                      "m", today=TODAY)
+    assert r.status == "ok"
+    assert len(calls) == 1
+    assert r.request is not None
+    assert r.request.working_days == 4
+
+
 def test_range_ending_on_saturday_is_accepted(monkeypatch):
     scripted(monkeypatch, [as_json(leave_type="annual", start_date="2026-10-20",
                                    end_date="2026-10-24", reason="family trip")])

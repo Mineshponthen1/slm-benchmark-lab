@@ -8,6 +8,8 @@ from pydantic import BaseModel, Field, ValidationError
 LeaveType = Literal["annual", "sick", "maternity", "paternity", "unpaid", "other"]
 WEEKEND = {5, 6}  # Python counts Monday as 0, so Saturday = 5 and Sunday = 6
 MISSING_WORDS = {"leave_type": "what type of leave you need", "dates": "which dates you need"}
+NUMBER_WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
+                "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10}
 
 
 class LeaveExtraction(BaseModel):
@@ -63,6 +65,13 @@ def reason_is_grounded(reason: str, message: str) -> bool:
     return all(w in text for w in words)
 
 
+def number_is_mentioned(n: int, message: str) -> bool:
+    text = message.lower()
+    digits = {int(d) for d in re.findall(r"\d+", text)}
+    words = {NUMBER_WORDS[w] for w in re.findall(r"[a-z]+", text) if w in NUMBER_WORDS}
+    return n in digits or n in words
+
+
 def find_problems(ex: LeaveExtraction, message: str) -> list[str]:
     problems = []
     if ex.leave_type is None:
@@ -95,6 +104,7 @@ def build_system_prompt(today: date) -> str:
         '- "days_requested": the number of days if the employee states one (for example 3 for "3 days"), otherwise null\n'
         '- "reason": the reason in the employee\'s own words, or null if none is given\n'
         '- "missing": a list of what is missing: "leave_type" and/or "dates". Use [] if nothing is missing\n'
+        'Relative dates such as "tomorrow" or "next Monday" count as dates: convert them using today\'s date.\n'
         "Never guess or invent information that is not in the message.\n"
         "No explanations and no extra text."
     )
@@ -159,6 +169,8 @@ def extract(message: str, model: str, temperature: float = 0, today: date | None
                 needed = " and ".join(MISSING_WORDS[m] for m in ex.missing)
                 return LeaveResult(status="needs_clarification", message=f"Please tell me {needed}.",
                                    attempts=attempt, first_try_valid=(attempt == 1))
+            if ex.days_requested is not None and not number_is_mentioned(ex.days_requested, message):
+                ex.days_requested = None
             problems = find_problems(ex, message)
             if not problems:
                 return finish(ex, attempt)
