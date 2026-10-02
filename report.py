@@ -42,12 +42,14 @@ charts = [
     ("memory_gb", "Memory used (GB) - lower is better"),
     ("quality_pct", "Quality (% correct) - higher is better"),
 ]
+colors = ["#DD8452" if n == "llama3.2 q4" else "#4C72B0" for n in names]
 
 fig, axes = plt.subplots(1, 3, figsize=(15, 4.5))
 for ax, (key, title) in zip(axes, charts):
     values = [r[key] for r in rows]
-    bars = ax.bar(names, values, color="#4C72B0")
-    ax.bar_label(bars)
+    bars = ax.bar(names, values, color=colors)
+    ax.bar_label(bars, fmt="%d" if key == "quality_pct" else "%.1f")
+    ax.set_ylim(0, 105 if key == "quality_pct" else max(values) * 1.15)
     ax.set_title(title)
     ax.tick_params(axis="x", rotation=20)
 
