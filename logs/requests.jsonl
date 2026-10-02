@@ -1,0 +1,4 @@
+{"timestamp": "2026-10-02T12:43:22+00:00", "status": "ok", "model": "llama3.2:3b-instruct-q4_K_M", "question_chars": 43, "tokens": 121, "ttft_seconds": 7.788, "tokens_per_second": 15.2, "seconds": 15.74}
+{"timestamp": "2026-10-02T12:44:04+00:00", "status": "ok", "model": "llama3.2:3b-instruct-q4_K_M", "question_chars": 75, "tokens": 104, "ttft_seconds": 0.256, "tokens_per_second": 14.0, "seconds": 7.69}
+{"timestamp": "2026-10-02T12:44:46+00:00", "status": "ok", "model": "llama3.2:3b-instruct-q4_K_M", "question_chars": 127, "tokens": 8, "ttft_seconds": 0.551, "tokens_per_second": 15.4, "seconds": 1.07}
+{"timestamp": "2026-10-02T12:45:49+00:00", "status": "ok", "model": "mistral:latest", "question_chars": 43, "tokens": 164, "ttft_seconds": 11.32, "tokens_per_second": 6.9, "seconds": 35.13}
