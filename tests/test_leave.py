@@ -19,32 +19,72 @@ def scripted(monkeypatch, replies):
 
 
 def as_json(**fields):
-    form = {"leave_type": None, "start_date": None, "end_date": None, "reason": None, "missing": []}
+    form = {"leave_type": None, "start_date": None, "end_date": None,
+            "days_requested": None, "reason": None, "missing": []}
     form.update(fields)
     return json.dumps(form)
 
 
 def test_valid_first_try(monkeypatch):
     scripted(monkeypatch, [as_json(leave_type="sick", start_date="2026-10-05",
-                                   end_date="2026-10-07", reason="flu")])
+                                   end_date="2026-10-07", days_requested=3, reason="flu")])
     r = leave.extract("3 days of sick leave from next Monday because of the flu", "m", today=TODAY)
     assert r.status == "ok"
     assert r.attempts == 1
     assert r.first_try_valid
     assert r.request is not None
     assert r.request.working_days == 3
+    assert r.request.notes == []
 
 
-def test_sunday_is_fixed_on_retry(monkeypatch):
+def test_weekend_start_is_moved_without_retry(monkeypatch):
+    calls = scripted(monkeypatch, [as_json(leave_type="sick", start_date="2026-10-04",
+                                           end_date="2026-10-07", days_requested=3, reason="flu")])
+    r = leave.extract("3 days of sick leave from next Monday because of the flu", "m", today=TODAY)
+    assert r.status == "ok"
+    assert len(calls) == 1
+    assert r.request is not None
+    assert r.request.start_date == date(2026, 10, 5)
+    assert r.request.working_days == 3
+    assert "Sunday" in r.request.notes[0]
+
+
+def test_days_mismatch_is_retried(monkeypatch):
     calls = scripted(monkeypatch, [
-        as_json(leave_type="sick", start_date="2026-10-04", end_date="2026-10-07", reason="flu"),
-        as_json(leave_type="sick", start_date="2026-10-05", end_date="2026-10-07", reason="flu"),
+        as_json(leave_type="sick", start_date="2026-10-05", end_date="2026-10-08",
+                days_requested=3, reason="flu"),
+        as_json(leave_type="sick", start_date="2026-10-05", end_date="2026-10-07",
+                days_requested=3, reason="flu"),
     ])
     r = leave.extract("3 days of sick leave from next Monday because of the flu", "m", today=TODAY)
     assert r.status == "ok"
     assert r.attempts == 2
     assert not r.first_try_valid
-    assert "Sunday" in calls[1][-1]["content"]
+    assert "4 working days" in calls[1][-1]["content"]
+    assert r.request is not None
+    assert r.request.end_date == date(2026, 10, 7)
+
+
+def test_range_ending_on_saturday_is_accepted(monkeypatch):
+    scripted(monkeypatch, [as_json(leave_type="annual", start_date="2026-10-20",
+                                   end_date="2026-10-24", reason="family trip")])
+    r = leave.extract("Please book my annual leave from 20 to 24 October for a family trip.",
+                      "m", today=TODAY)
+    assert r.status == "ok"
+    assert r.request is not None
+    assert r.request.end_date == date(2026, 10, 23)
+    assert r.request.working_days == 4
+    assert "Saturday" in r.request.notes[0]
+
+
+def test_saturday_only_request_asks_the_employee(monkeypatch):
+    calls = scripted(monkeypatch, [as_json(leave_type="unpaid", start_date="2026-10-03",
+                                           end_date="2026-10-03", days_requested=1,
+                                           reason="personal reasons")])
+    r = leave.extract("I need tomorrow off, unpaid, for personal reasons.", "m", today=TODAY)
+    assert r.status == "needs_clarification"
+    assert len(calls) == 1
+    assert "Saturday" in (r.message or "")
 
 
 def test_missing_info_asks_for_clarification(monkeypatch):
@@ -63,15 +103,6 @@ def test_invented_reason_fails_after_one_retry(monkeypatch):
     assert r.attempts == 2
     assert len(calls) == 2
     assert any("Flu" in p for p in r.problems)
-
-
-def test_genuine_weekend_request_asks_the_employee(monkeypatch):
-    saturday = as_json(leave_type="unpaid", start_date="2026-10-03",
-                       end_date="2026-10-03", reason="personal reasons")
-    scripted(monkeypatch, [saturday, saturday])
-    r = leave.extract("I need tomorrow off, unpaid, for personal reasons.", "m", today=TODAY)
-    assert r.status == "needs_clarification"
-    assert "Saturday" in (r.message or "")
 
 
 def test_broken_json_is_retried(monkeypatch):
