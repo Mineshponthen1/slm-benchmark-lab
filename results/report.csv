@@ -1,0 +1,5 @@
+model,load_s,tokens_per_s,avg_time_s,memory_gb,quality,quality_pct
+llama3.2:3b-instruct-q4_K_M,4.1,14.6,5.7,2.6,28/30,93
+llama3.2:3b-instruct-q5_K_M,3.9,14.1,5.5,2.9,27/30,90
+phi4-mini:latest,5.7,12.3,3.6,3.1,27/30,90
+mistral:latest,8.6,7.1,9.0,5.0,27/30,90

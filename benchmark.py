@@ -1,3 +1,5 @@
+import json
+import os
 import statistics
 import time
 import ollama
@@ -31,13 +33,21 @@ def unload(model):
     ollama.generate(model=model, prompt="", keep_alive=0)
 
 
+def memory_gb(model):
+    for m in ollama.ps().models:
+        if m.model == model:
+            return (m.size or 0) / 1e9
+    return 0.0
+
+
 results = []
 for model in MODELS:
     print(f"\nTesting {model} ...")
     unload(model)
 
     warmup = ask(model)
-    print(f"  warm-up done (load {warmup['load']:.1f} s, not counted)")
+    mem = memory_gb(model)
+    print(f"  warm-up done (load {warmup['load']:.1f} s, memory {mem:.1f} GB)")
 
     runs = []
     for i in range(RUNS):
@@ -51,11 +61,18 @@ for model in MODELS:
         "speed": statistics.mean(r["speed"] for r in runs),
         "total": statistics.mean(r["total"] for r in runs),
         "tokens": statistics.mean(r["tokens"] for r in runs),
+        "memory_gb": mem,
     })
     unload(model)
 
-print("\n" + "=" * 70)
-print(f"{'Model':<30}{'Load (s)':>10}{'Tokens/s':>10}{'Time (s)':>10}{'Tokens':>10}")
-print("-" * 70)
+os.makedirs("results", exist_ok=True)
+with open("results/speed.json", "w", encoding="utf-8") as f:
+    json.dump(results, f, indent=2)
+
+print("\n" + "=" * 80)
+print(f"{'Model':<30}{'Load (s)':>10}{'Tokens/s':>10}{'Time (s)':>10}{'Tokens':>10}{'Mem (GB)':>10}")
+print("-" * 80)
 for r in results:
-    print(f"{r['model']:<30}{r['load']:>10.1f}{r['speed']:>10.1f}{r['total']:>10.1f}{r['tokens']:>10.0f}")
+    print(f"{r['model']:<30}{r['load']:>10.1f}{r['speed']:>10.1f}{r['total']:>10.1f}"
+          f"{r['tokens']:>10.0f}{r['memory_gb']:>10.1f}")
+print("\nSaved results/speed.json")
