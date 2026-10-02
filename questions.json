@@ -1,12 +1,37 @@
 [
-  {"id": 1, "question": "What is 15% of 2,400? Reply with just the number.", "accept": ["360"]},
-  {"id": 2, "question": "A loan of 10,000 has simple interest of 5% per year. How much interest is paid after 3 years? Reply with just the number.", "accept": ["1500"]},
-  {"id": 3, "question": "What does KYC stand for in banking?", "accept": ["know your customer", "know your client"]},
-  {"id": 4, "question": "What does AML stand for in banking?", "accept": ["anti money laundering"]},
-  {"id": 5, "question": "What is the capital of the United Arab Emirates? Answer in one word.", "accept": ["abu dhabi"]},
-  {"id": 6, "question": "What currency is used in the UAE? Give only the 3-letter code.", "accept": ["aed"]},
-  {"id": 7, "question": "Is this feedback positive or negative: 'The onboarding process was slow and confusing.' Answer with one word.", "accept": ["negative"]},
-  {"id": 8, "question": "An employee works 8 hours a day, 5 days a week. How many hours do they work in 4 weeks? Reply with just the number.", "accept": ["160"]},
-  {"id": 9, "question": "If today is Monday, what day of the week will it be in 10 days? Answer with one word.", "accept": ["thursday"]},
-  {"id": 10, "question": "Extract the email address from this text: 'Please contact hr.team@example.com for details.'", "accept": ["hr.team@example.com"]}
+  {"id": 1, "category": "maths", "question": "What is 15% of 2,400? Reply with just the number.", "accept": ["360"]},
+  {"id": 2, "category": "maths", "question": "A loan of 10,000 has simple interest of 5% per year. How much interest is paid after 3 years? Reply with just the number.", "accept": ["1500"]},
+  {"id": 3, "category": "maths", "question": "An employee works 8 hours a day, 5 days a week. How many hours do they work in 4 weeks? Reply with just the number.", "accept": ["160"]},
+  {"id": 4, "category": "maths", "question": "A salary of 12,000 increases by 10%. What is the new salary? Reply with just the number.", "accept": ["13200"]},
+  {"id": 5, "category": "maths", "question": "A team of 6 people shares a bonus of 4,500 equally. How much does each person get? Reply with just the number.", "accept": ["750"]},
+
+  {"id": 6, "category": "knowledge", "question": "What does KYC stand for in banking?", "accept": ["know your customer", "know your client"]},
+  {"id": 7, "category": "knowledge", "question": "What does AML stand for in banking?", "accept": ["anti money laundering"]},
+  {"id": 8, "category": "knowledge", "question": "What currency is used in the UAE? Give only the 3-letter code.", "accept": ["aed"]},
+  {"id": 9, "category": "knowledge", "question": "In HR, what does the abbreviation KPI stand for?", "accept": ["key performance indicator"]},
+  {"id": 10, "category": "knowledge", "question": "In recruitment, what does CV stand for?", "accept": ["curriculum vitae"]},
+
+  {"id": 11, "category": "general", "question": "What is the capital of the United Arab Emirates? Answer in one word.", "accept": ["abu dhabi"]},
+  {"id": 12, "category": "general", "question": "What is the tallest building in the world? Answer with just its name.", "accept": ["burj khalifa"]},
+  {"id": 13, "category": "general", "question": "Which planet is known as the Red Planet? Answer in one word.", "accept": ["mars"]},
+  {"id": 14, "category": "general", "question": "Who wrote the play Romeo and Juliet?", "accept": ["shakespeare"]},
+  {"id": 15, "category": "general", "question": "In which year was the United Arab Emirates formed as a country? Reply with just the year.", "accept": ["1971"]},
+
+  {"id": 16, "category": "tone", "question": "Is this feedback positive or negative: 'The onboarding process was slow and confusing.' Answer with one word.", "accept": ["negative"]},
+  {"id": 17, "category": "tone", "question": "Is this feedback positive or negative: 'My manager gave me clear goals and great support this quarter.' Answer with one word.", "accept": ["positive"]},
+  {"id": 18, "category": "tone", "question": "Classify this customer message as COMPLAINT or QUESTION: 'What time does your Dubai branch open on Saturdays?' Answer with one word.", "accept": ["question"]},
+  {"id": 19, "category": "tone", "question": "Classify this customer message as COMPLAINT or QUESTION: 'I was charged twice for the same transfer and nobody has called me back.' Answer with one word.", "accept": ["complaint"]},
+  {"id": 20, "category": "tone", "question": "Is this message positive, negative, or neutral: 'The training session starts at 10 am in Room 4.' Answer with one word.", "accept": ["neutral"]},
+
+  {"id": 21, "category": "reasoning", "question": "If today is Monday, what day of the week will it be in 10 days? Answer with one word.", "accept": ["thursday"]},
+  {"id": 22, "category": "reasoning", "question": "Sara is older than Omar. Omar is older than Lina. Who is the youngest? Answer with just the name.", "accept": ["lina"]},
+  {"id": 23, "category": "reasoning", "question": "A meeting starts at 9:45 and lasts 50 minutes. What time does it end? Answer in HH:MM format.", "accept": ["10:35"]},
+  {"id": 24, "category": "reasoning", "question": "All managers attend the town hall. Fatima is a manager. Does Fatima attend the town hall? Answer yes or no.", "accept": ["yes"]},
+  {"id": 25, "category": "reasoning", "question": "A store had 120 laptops. It sold 45 and then received 30 more. How many laptops does it have now? Reply with just the number.", "accept": ["105"]},
+
+  {"id": 26, "category": "extraction", "question": "Extract the email address from this text: 'Please contact hr.team@example.com for details.'", "accept": ["hr.team@example.com"]},
+  {"id": 27, "category": "extraction", "question": "Extract the date from this text: 'The interview is scheduled for 14 March 2026 at the Dubai office.' Reply with just the date.", "accept": ["14 march 2026", "march 14 2026", "14/03/2026", "2026 03 14"]},
+  {"id": 28, "category": "extraction", "question": "Extract the phone number from this text: 'For urgent cases, call +971 4 123 4567 any time.'", "accept": ["+971 4 123 4567", "+97141234567"]},
+  {"id": 29, "category": "extraction", "question": "What job title is mentioned in this sentence: 'We are hiring a Senior Data Analyst to join our Abu Dhabi team.' Reply with just the job title.", "accept": ["senior data analyst"]},
+  {"id": 30, "category": "extraction", "question": "What amount is mentioned in this text: 'The approved loan is AED 250,000 for 5 years.' Reply with just the number.", "accept": ["250000"]}
 ]

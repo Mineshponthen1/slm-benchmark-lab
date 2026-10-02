@@ -2,241 +2,841 @@
   {
     "model": "llama3.2:3b-instruct-q4_K_M",
     "id": 1,
+    "category": "maths",
     "answer": "360",
     "correct": true
   },
   {
     "model": "llama3.2:3b-instruct-q4_K_M",
     "id": 2,
+    "category": "maths",
     "answer": "1500",
     "correct": true
   },
   {
     "model": "llama3.2:3b-instruct-q4_K_M",
     "id": 3,
-    "answer": "KYC stands for Know Your Customer. It is a set of procedures and regulations used by banks and financial institutions to verify the identity of their customers and ensure that they are who they claim to be. The goal of KYC is to prevent money laundering, terrorist financing, and other financial crimes by ensuring that customers are legitimate and trustworthy.",
-    "correct": true
-  },
-  {
-    "model": "llama3.2:3b-instruct-q4_K_M",
-    "id": 4,
-    "answer": "AML stands for Anti-Money Laundering. It refers to a set of regulations and laws designed to prevent and combat the laundering of money, which is the process of disguising the origin of illicitly obtained funds to make them appear legitimate.\n\nIn banking, AML regulations require financial institutions to implement various measures to identify, report, and prevent suspicious transactions and activities that may be related to money laundering. These measures include:\n\n1. Know Your Customer (KYC) requirements\n2. Transaction monitoring and reporting\n3. Customer due diligence\n4. Reporting suspicious transactions to regulatory authorities\n\nThe goal of AML regulations is to prevent financial institutions from being used to facilitate money laundering and terrorist financing, and to ensure that the financial system is used for legitimate and lawful purposes.",
-    "correct": true
-  },
-  {
-    "model": "llama3.2:3b-instruct-q4_K_M",
-    "id": 5,
-    "answer": "Abu Dhabi.",
-    "correct": true
-  },
-  {
-    "model": "llama3.2:3b-instruct-q4_K_M",
-    "id": 6,
-    "answer": "AED",
-    "correct": true
-  },
-  {
-    "model": "llama3.2:3b-instruct-q4_K_M",
-    "id": 7,
-    "answer": "Negative.",
-    "correct": true
-  },
-  {
-    "model": "llama3.2:3b-instruct-q4_K_M",
-    "id": 8,
+    "category": "maths",
     "answer": "160",
     "correct": true
   },
   {
     "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 4,
+    "category": "maths",
+    "answer": "12,600",
+    "correct": false
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 5,
+    "category": "maths",
+    "answer": "750",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 6,
+    "category": "knowledge",
+    "answer": "KYC stands for Know Your Customer. It is a set of procedures and regulations used by banks and financial institutions to verify the identity of their customers and ensure that they are who they claim to be. The goal of KYC is to prevent money laundering, terrorist financing, and other financial crimes by ensuring that customers are legitimate and trustworthy.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 7,
+    "category": "knowledge",
+    "answer": "AML stands for Anti-Money Laundering. It refers to a set of regulations and laws designed to prevent and combat the laundering of money, which is the process of disguising the origin of illicitly obtained funds to make them appear legitimate.\n\nIn banking, AML regulations require financial institutions to implement various measures to identify, report, and prevent suspicious transactions and activities that may be related to money laundering. These measures include:\n\n1. Know Your Customer (KYC) requirements\n2. Transaction monitoring and reporting\n3. Customer due diligence\n4. Reporting suspicious transactions to regulatory authorities\n\nThe goal of AML regulations is to prevent financial institutions from being used to facilitate money laundering and terrorist financing, and to ensure that the financial system is used for legitimate and lawful purposes.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 8,
+    "category": "knowledge",
+    "answer": "AED",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
     "id": 9,
-    "answer": "Thursday.",
+    "category": "knowledge",
+    "answer": "In HR, KPI stands for Key Performance Indicator. It refers to a measurable value that demonstrates how effectively an organization or a specific role is achieving its objectives. KPIs are used to evaluate performance, track progress, and make data-driven decisions.",
     "correct": true
   },
   {
     "model": "llama3.2:3b-instruct-q4_K_M",
     "id": 10,
+    "category": "knowledge",
+    "answer": "In recruitment, CV stands for \"Curriculum Vitae\". It is a detailed document that highlights a person's education, work experience, skills, and achievements, typically used to apply for jobs or academic positions.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 11,
+    "category": "general",
+    "answer": "Abu Dhabi.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 12,
+    "category": "general",
+    "answer": "Burj Khalifa",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 13,
+    "category": "general",
+    "answer": "Mars.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 14,
+    "category": "general",
+    "answer": "The play Romeo and Juliet was written by William Shakespeare.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 15,
+    "category": "general",
+    "answer": "1971",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 16,
+    "category": "tone",
+    "answer": "Negative.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 17,
+    "category": "tone",
+    "answer": "Positive.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 18,
+    "category": "tone",
+    "answer": "QUESTION",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 19,
+    "category": "tone",
+    "answer": "COMPLAINT",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 20,
+    "category": "tone",
+    "answer": "Neutral",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 21,
+    "category": "reasoning",
+    "answer": "Thursday.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 22,
+    "category": "reasoning",
+    "answer": "Lina",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 23,
+    "category": "reasoning",
+    "answer": "To find the end time, add 50 minutes to the start time.\n\n9:45 + 50 minutes = 10:35\n\nThe meeting ends at 10:35.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 24,
+    "category": "reasoning",
+    "answer": "Yes.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 25,
+    "category": "reasoning",
+    "answer": "95",
+    "correct": false
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 26,
+    "category": "extraction",
     "answer": "The email address is: hr.team@example.com",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 27,
+    "category": "extraction",
+    "answer": "14 March 2026",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 28,
+    "category": "extraction",
+    "answer": "The phone number extracted from the text is: +971 4 123 4567",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 29,
+    "category": "extraction",
+    "answer": "Senior Data Analyst",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 30,
+    "category": "extraction",
+    "answer": "250,000",
     "correct": true
   },
   {
     "model": "llama3.2:3b-instruct-q5_K_M",
     "id": 1,
+    "category": "maths",
     "answer": "368",
     "correct": false
   },
   {
     "model": "llama3.2:3b-instruct-q5_K_M",
     "id": 2,
+    "category": "maths",
     "answer": "1500",
     "correct": true
   },
   {
     "model": "llama3.2:3b-instruct-q5_K_M",
     "id": 3,
-    "answer": "KYC stands for Know Your Customer. It is a set of regulations and procedures used by banks and financial institutions to verify the identity of their customers and assess the level of risk associated with doing business with them. The goal of KYC is to prevent money laundering, terrorist financing, and other financial crimes by ensuring that customers are who they claim to be and that their activities are legitimate.",
-    "correct": true
-  },
-  {
-    "model": "llama3.2:3b-instruct-q5_K_M",
-    "id": 4,
-    "answer": "AML stands for Anti-Money Laundering. It refers to a set of regulations and laws designed to prevent and combat the laundering of illicit funds in the financial sector. The primary goal of AML is to identify, report, and prevent the use of financial systems for money laundering, terrorist financing, and other illicit activities.",
-    "correct": true
-  },
-  {
-    "model": "llama3.2:3b-instruct-q5_K_M",
-    "id": 5,
-    "answer": "Abu Dhabi.",
-    "correct": true
-  },
-  {
-    "model": "llama3.2:3b-instruct-q5_K_M",
-    "id": 6,
-    "answer": "AED",
-    "correct": true
-  },
-  {
-    "model": "llama3.2:3b-instruct-q5_K_M",
-    "id": 7,
-    "answer": "Negative.",
-    "correct": true
-  },
-  {
-    "model": "llama3.2:3b-instruct-q5_K_M",
-    "id": 8,
+    "category": "maths",
     "answer": "160",
     "correct": true
   },
   {
     "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 4,
+    "category": "maths",
+    "answer": "12,600",
+    "correct": false
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 5,
+    "category": "maths",
+    "answer": "750",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 6,
+    "category": "knowledge",
+    "answer": "KYC stands for Know Your Customer. It is a set of regulations and procedures used by banks and financial institutions to verify the identity of their customers and assess the level of risk associated with doing business with them. The goal of KYC is to prevent money laundering, terrorist financing, and other financial crimes by ensuring that customers are who they claim to be and that their activities are legitimate.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 7,
+    "category": "knowledge",
+    "answer": "AML stands for Anti-Money Laundering. It refers to a set of regulations and laws designed to prevent and combat the laundering of illicit funds in the financial sector. The primary goal of AML is to identify, report, and prevent the use of financial systems for money laundering, terrorist financing, and other illicit activities.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 8,
+    "category": "knowledge",
+    "answer": "AED",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
     "id": 9,
-    "answer": "Thursday.",
+    "category": "knowledge",
+    "answer": "In HR, KPI stands for Key Performance Indicator. It refers to a measurable value that demonstrates how effectively an organization is achieving its objectives and goals. KPIs are used to evaluate the performance of employees, teams, and departments, and to identify areas for improvement.",
     "correct": true
   },
   {
     "model": "llama3.2:3b-instruct-q5_K_M",
     "id": 10,
+    "category": "knowledge",
+    "answer": "In recruitment, CV stands for Curriculum Vitae.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 11,
+    "category": "general",
+    "answer": "Abu Dhabi.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 12,
+    "category": "general",
+    "answer": "Burj Khalifa",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 13,
+    "category": "general",
+    "answer": "Mars.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 14,
+    "category": "general",
+    "answer": "The play \"Romeo and Juliet\" was written by William Shakespeare. It is one of his most famous tragedies, and is believed to have been written between 1591 and 1595.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 15,
+    "category": "general",
+    "answer": "1971",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 16,
+    "category": "tone",
+    "answer": "Negative.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 17,
+    "category": "tone",
+    "answer": "Positive.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 18,
+    "category": "tone",
+    "answer": "QUESTION",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 19,
+    "category": "tone",
+    "answer": "COMPLAINT",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 20,
+    "category": "tone",
+    "answer": "Neutral.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 21,
+    "category": "reasoning",
+    "answer": "Thursday.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 22,
+    "category": "reasoning",
+    "answer": "Lina",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 23,
+    "category": "reasoning",
+    "answer": "To find the end time, add 50 minutes to the start time.\n\n9:45 + 50 minutes = 10:35\n\nThe meeting ends at 10:35.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 24,
+    "category": "reasoning",
+    "answer": "Yes.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 25,
+    "category": "reasoning",
+    "answer": "75",
+    "correct": false
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 26,
+    "category": "extraction",
     "answer": "The email address is: hr.team@example.com",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 27,
+    "category": "extraction",
+    "answer": "14 March 2026",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 28,
+    "category": "extraction",
+    "answer": "The phone number extracted from the text is: +971 4 123 4567",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 29,
+    "category": "extraction",
+    "answer": "Senior Data Analyst",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 30,
+    "category": "extraction",
+    "answer": "250,000",
     "correct": true
   },
   {
     "model": "phi4-mini:latest",
     "id": 1,
+    "category": "maths",
     "answer": "360",
     "correct": true
   },
   {
     "model": "phi4-mini:latest",
     "id": 2,
+    "category": "maths",
     "answer": "250",
     "correct": false
   },
   {
     "model": "phi4-mini:latest",
     "id": 3,
-    "answer": "KYC stands for \"Know Your Customer.\" It is a standard banking practice that requires financial institutions to verify the identity of their clients and assess their suitability, or risk profile, for a range of products and services. The process helps banks prevent fraud, money laundering, and terrorist financing. KYC typically involves collecting information such as name, address, date of birth, and identification documents like passports or driver's licenses.",
-    "correct": true
-  },
-  {
-    "model": "phi4-mini:latest",
-    "id": 4,
-    "answer": "In banking, AML stands for Anti-Money Laundering. Anti-Money Laundering refers to a set of laws, regulations, and procedures designed to prevent criminals from disguising illegally obtained funds as legitimate income. Banks and other financial institutions implement AML measures to detect and report suspicious activities that could indicate money laundering, terrorist financing, or other financial crimes. These measures include customer due diligence, record-keeping, reporting of suspicious transactions, and ongoing monitoring of customer activities.",
-    "correct": true
-  },
-  {
-    "model": "phi4-mini:latest",
-    "id": 5,
-    "answer": "Dubai",
-    "correct": false
-  },
-  {
-    "model": "phi4-mini:latest",
-    "id": 6,
-    "answer": "AED",
-    "correct": true
-  },
-  {
-    "model": "phi4-mini:latest",
-    "id": 7,
-    "answer": "Negative.",
-    "correct": true
-  },
-  {
-    "model": "phi4-mini:latest",
-    "id": 8,
+    "category": "maths",
     "answer": "160 hours",
     "correct": true
   },
   {
     "model": "phi4-mini:latest",
+    "id": 4,
+    "category": "maths",
+    "answer": "13,200",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 5,
+    "category": "maths",
+    "answer": "750",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 6,
+    "category": "knowledge",
+    "answer": "KYC stands for \"Know Your Customer.\" It is a standard banking practice that requires financial institutions to verify the identity of their clients and assess their suitability, or risk profile, for a range of products and services. The process helps banks prevent fraud, money laundering, and terrorist financing. KYC typically involves collecting information such as name, address, date of birth, and identification documents like passports or driver's licenses.",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 7,
+    "category": "knowledge",
+    "answer": "In banking, AML stands for Anti-Money Laundering. Anti-Money Laundering refers to a set of laws, regulations, and procedures designed to prevent criminals from disguising illegally obtained funds as legitimate income. Banks and other financial institutions implement AML measures to detect and report suspicious activities that could indicate money laundering, terrorist financing, or other financial crimes. These measures include customer due diligence, record-keeping, reporting of suspicious transactions, and ongoing monitoring of customer activities.",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 8,
+    "category": "knowledge",
+    "answer": "AED",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
     "id": 9,
+    "category": "knowledge",
+    "answer": "In HR, KPI stands for Key Performance Indicator. These are metrics used to evaluate the success of an HR department in achieving its goals and objectives. Common HR KPIs include turnover rate, time-to-hire, employee satisfaction scores, and training effectiveness.",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 10,
+    "category": "knowledge",
+    "answer": "In recruitment, CV stands for Curriculum Vitae. It is a detailed document that outlines an individual's educational background, work experience, skills, achievements, and other relevant information. It is commonly used by job seekers to present themselves to potential employers.",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 11,
+    "category": "general",
+    "answer": "Dubai",
+    "correct": false
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 12,
+    "category": "general",
+    "answer": "Burj Khalifa",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 13,
+    "category": "general",
+    "answer": "Mars",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 14,
+    "category": "general",
+    "answer": "William Shakespeare wrote the play \"Romeo and Juliet.\" He was an English playwright, poet, and actor, widely regarded as the greatest writer in the English language and the world's pre-eminent dramatist. \"Romeo and Juliet\" is one of his most famous tragedies and was written in the early 17th century.",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 15,
+    "category": "general",
+    "answer": "1971",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 16,
+    "category": "tone",
+    "answer": "Negative.",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 17,
+    "category": "tone",
+    "answer": "Positive",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 18,
+    "category": "tone",
+    "answer": "QUESTION",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 19,
+    "category": "tone",
+    "answer": "COMPLAINT",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 20,
+    "category": "tone",
+    "answer": "Neutral",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 21,
+    "category": "reasoning",
     "answer": "Tuesday",
     "correct": false
   },
   {
     "model": "phi4-mini:latest",
-    "id": 10,
+    "id": 22,
+    "category": "reasoning",
+    "answer": "Lina",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 23,
+    "category": "reasoning",
+    "answer": "The meeting starts at 9:45 and lasts 50 minutes. To find the end time, we add 50 minutes to 9:45.\n\n9:45 + 50 minutes = 10:35\n\nSo, the meeting ends at 10:35.",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 24,
+    "category": "reasoning",
+    "answer": "Yes.",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 25,
+    "category": "reasoning",
+    "answer": "105",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 26,
+    "category": "extraction",
     "answer": "The extracted email address from the text 'Please contact hr.team@example.com for details.' is hr.team@example.com.",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 27,
+    "category": "extraction",
+    "answer": "March 14, 2026",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 28,
+    "category": "extraction",
+    "answer": "The phone number extracted from the text is +971 4 123 4567.",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 29,
+    "category": "extraction",
+    "answer": "Senior Data Analyst",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 30,
+    "category": "extraction",
+    "answer": "250000",
     "correct": true
   },
   {
     "model": "mistral:latest",
     "id": 1,
+    "category": "maths",
     "answer": "360",
     "correct": true
   },
   {
     "model": "mistral:latest",
     "id": 2,
+    "category": "maths",
     "answer": "1500",
     "correct": true
   },
   {
     "model": "mistral:latest",
     "id": 3,
-    "answer": "KYC stands for Know Your Customer. It is a process that financial institutions use to verify the identity of their customers and assess potential risks associated with illegal activities, such as money laundering and terrorist financing. The KYC process typically involves collecting and verifying personal information, including identification documents, address, and source of wealth. It is a crucial part of anti-money laundering (AML) and counter-terrorist financing (CTF) regulations.",
-    "correct": true
-  },
-  {
-    "model": "mistral:latest",
-    "id": 4,
-    "answer": "In the context of banking, AML stands for Anti-Money Laundering. It refers to the legal procedures, regulations, and guidelines put in place to prevent banks and other financial institutions from being used to launder money obtained from illegal activities. These procedures aim to detect and deter money laundering and the financing of terrorism.",
-    "correct": true
-  },
-  {
-    "model": "mistral:latest",
-    "id": 5,
-    "answer": "Abu Dhabi",
-    "correct": true
-  },
-  {
-    "model": "mistral:latest",
-    "id": 6,
-    "answer": "AED (United Arab Emirates Dirham)",
-    "correct": true
-  },
-  {
-    "model": "mistral:latest",
-    "id": 7,
-    "answer": "Negative",
-    "correct": true
-  },
-  {
-    "model": "mistral:latest",
-    "id": 8,
+    "category": "maths",
     "answer": "160",
     "correct": true
   },
   {
     "model": "mistral:latest",
+    "id": 4,
+    "category": "maths",
+    "answer": "13,200",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 5,
+    "category": "maths",
+    "answer": "750",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 6,
+    "category": "knowledge",
+    "answer": "KYC stands for Know Your Customer. It is a process that financial institutions use to verify the identity of their customers and assess potential risks associated with illegal activities, such as money laundering and terrorist financing. The KYC process typically involves collecting and verifying personal information, including identification documents, address, and source of wealth. It is a crucial part of anti-money laundering (AML) and counter-terrorist financing (CTF) regulations.",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 7,
+    "category": "knowledge",
+    "answer": "In the context of banking, AML stands for Anti-Money Laundering. It refers to the legal procedures, regulations, and guidelines put in place to prevent banks and other financial institutions from being used to launder money obtained from illegal activities. These procedures aim to detect and deter money laundering and the financing of terrorism.",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 8,
+    "category": "knowledge",
+    "answer": "AED (United Arab Emirates Dirham)",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
     "id": 9,
+    "category": "knowledge",
+    "answer": "In the context of Human Resources (HR), KPI stands for Key Performance Indicator. KPIs are measurable values that demonstrate how effectively an organization or individual is achieving key business objectives. They help track progress towards these objectives and identify areas for improvement. Common HR KPIs might include employee turnover rate, recruitment cost per hire, time to fill a position, employee engagement scores, and training and development costs per employee.",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 10,
+    "category": "knowledge",
+    "answer": "In the context of recruitment, CV stands for Curriculum Vitae, which is a detailed document outlining a person's education, work experience, skills, and other qualifications. It is often used when applying for jobs.",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 11,
+    "category": "general",
+    "answer": "Abu Dhabi",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 12,
+    "category": "general",
+    "answer": "Burj Khalifa",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 13,
+    "category": "general",
+    "answer": "Mars",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 14,
+    "category": "general",
+    "answer": "The play \"Romeo and Juliet\" was written by William Shakespeare. It is one of his most famous works and is considered a classic in the world of literature. The play tells the tragic love story of two young lovers from feuding families in Verona, Italy, and has been adapted into numerous films, operas, and other forms of media.",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 15,
+    "category": "general",
+    "answer": "1971",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 16,
+    "category": "tone",
+    "answer": "Negative",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 17,
+    "category": "tone",
+    "answer": "Positive",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 18,
+    "category": "tone",
+    "answer": "QUESTION",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 19,
+    "category": "tone",
+    "answer": "COMPLAINT",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 20,
+    "category": "tone",
+    "answer": "Neutral",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 21,
+    "category": "reasoning",
     "answer": "Tuesday",
     "correct": false
   },
   {
     "model": "mistral:latest",
-    "id": 10,
+    "id": 22,
+    "category": "reasoning",
+    "answer": "Lina",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 23,
+    "category": "reasoning",
+    "answer": "The meeting ends at 11:15 (HH:MM format). If it starts at 9:45 and lasts 50 minutes, you simply add 50 minutes to 9:45. That is, 9:45 + 50 minutes = 11:15.",
+    "correct": false
+  },
+  {
+    "model": "mistral:latest",
+    "id": 24,
+    "category": "reasoning",
+    "answer": "Yes, Fatima attends the town hall since she is a manager.",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 25,
+    "category": "reasoning",
+    "answer": "The store now has 155 laptops.",
+    "correct": false
+  },
+  {
+    "model": "mistral:latest",
+    "id": 26,
+    "category": "extraction",
     "answer": "The email address in the text is 'hr.team@example.com'.",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 27,
+    "category": "extraction",
+    "answer": "14 March 2026",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 28,
+    "category": "extraction",
+    "answer": "The phone number extracted from the text is: +971 4 123 4567",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 29,
+    "category": "extraction",
+    "answer": "Senior Data Analyst",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 30,
+    "category": "extraction",
+    "answer": "250,000",
     "correct": true
   }
 ]
