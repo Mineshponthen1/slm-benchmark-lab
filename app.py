@@ -6,7 +6,8 @@ from typing import Literal
 
 import ollama
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ValidationError
+from leave import LeaveResult, extract
 
 DEFAULT_MODEL = "llama3.2:3b-instruct-q4_K_M"
 ModelName = Literal[
@@ -126,3 +127,17 @@ def ask(req: AskRequest):
         tokens_per_second=round(speed, 1),
         seconds=round(seconds, 2),
     )
+class LeaveMessage(BaseModel):
+    message: str = Field(min_length=1, max_length=1000)
+    model: ModelName = DEFAULT_MODEL
+
+
+@app.post("/leave-request", response_model=LeaveResult)
+def leave_request(req: LeaveMessage):
+    try:
+        result = extract(req.message, req.model)
+    except Exception as e:
+        raise HTTPException(status_code=503, detail=f"Model call failed: {e}")
+    if result.status == "failed":
+        raise HTTPException(status_code=502, detail=result.model_dump(mode="json"))
+    return result
