@@ -24,6 +24,7 @@ for s in speed:
     rows.append({
         "model": model,
         "load_s": round(s["load"], 1),
+        "ttft_s": round(s["ttft"], 2),
         "tokens_per_s": round(s["speed"], 1),
         "avg_time_s": round(s["total"], 1),
         "memory_gb": round(s["memory_gb"], 1),
@@ -38,17 +39,18 @@ with open("results/report.csv", "w", newline="", encoding="utf-8") as f:
 
 names = [SHORT.get(r["model"], r["model"]) for r in rows]
 charts = [
-    ("tokens_per_s", "Speed (tokens/s) - higher is better"),
-    ("memory_gb", "Memory used (GB) - lower is better"),
-    ("quality_pct", "Quality (% correct) - higher is better"),
+    ("tokens_per_s", "Speed (tokens/s) - higher is better", "%.1f"),
+    ("ttft_s", "Time to first token (s) - lower is better", "%.2f"),
+    ("memory_gb", "Memory used (GB) - lower is better", "%.1f"),
+    ("quality_pct", "Quality (% correct) - higher is better", "%d"),
 ]
 colors = ["#DD8452" if n == "llama3.2 q4" else "#4C72B0" for n in names]
 
-fig, axes = plt.subplots(1, 3, figsize=(15, 4.5))
-for ax, (key, title) in zip(axes, charts):
+fig, axes = plt.subplots(1, 4, figsize=(20, 4.5))
+for ax, (key, title, fmt) in zip(axes, charts):
     values = [r[key] for r in rows]
     bars = ax.bar(names, values, color=colors)
-    ax.bar_label(bars, fmt="%d" if key == "quality_pct" else "%.1f")
+    ax.bar_label(bars, fmt=fmt)
     ax.set_ylim(0, 105 if key == "quality_pct" else max(values) * 1.15)
     ax.set_title(title)
     ax.tick_params(axis="x", rotation=20)

@@ -1,5 +1,5 @@
-model,load_s,tokens_per_s,avg_time_s,memory_gb,quality,quality_pct
-llama3.2:3b-instruct-q4_K_M,4.1,14.6,5.7,2.6,28/30,93
-llama3.2:3b-instruct-q5_K_M,3.9,14.1,5.5,2.9,27/30,90
-phi4-mini:latest,5.7,12.3,3.6,3.1,27/30,90
-mistral:latest,8.6,7.1,9.0,5.0,27/30,90
+model,load_s,ttft_s,tokens_per_s,avg_time_s,memory_gb,quality,quality_pct
+llama3.2:3b-instruct-q4_K_M,4.8,0.19,16.7,5.0,2.6,28/30,93
+llama3.2:3b-instruct-q5_K_M,4.0,0.38,15.3,5.8,2.9,27/30,90
+phi4-mini:latest,5.0,0.26,13.9,3.7,3.1,27/30,90
+mistral:latest,7.4,0.46,7.9,8.6,5.0,27/30,90
