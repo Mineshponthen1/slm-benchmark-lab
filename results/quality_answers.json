@@ -1,0 +1,242 @@
+[
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 1,
+    "answer": "360",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 2,
+    "answer": "1500",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 3,
+    "answer": "KYC stands for Know Your Customer. It is a set of procedures and regulations used by banks and financial institutions to verify the identity of their customers and ensure that they are who they claim to be. The goal of KYC is to prevent money laundering, terrorist financing, and other financial crimes by ensuring that customers are legitimate and trustworthy.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 4,
+    "answer": "AML stands for Anti-Money Laundering. It refers to a set of regulations and laws designed to prevent and combat the laundering of money, which is the process of disguising the origin of illicitly obtained funds to make them appear legitimate.\n\nIn banking, AML regulations require financial institutions to implement various measures to identify, report, and prevent suspicious transactions and activities that may be related to money laundering. These measures include:\n\n1. Know Your Customer (KYC) requirements\n2. Transaction monitoring and reporting\n3. Customer due diligence\n4. Reporting suspicious transactions to regulatory authorities\n\nThe goal of AML regulations is to prevent financial institutions from being used to facilitate money laundering and terrorist financing, and to ensure that the financial system is used for legitimate and lawful purposes.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 5,
+    "answer": "Abu Dhabi.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 6,
+    "answer": "AED",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 7,
+    "answer": "Negative.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 8,
+    "answer": "160",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 9,
+    "answer": "Thursday.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q4_K_M",
+    "id": 10,
+    "answer": "The email address is: hr.team@example.com",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 1,
+    "answer": "368",
+    "correct": false
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 2,
+    "answer": "1500",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 3,
+    "answer": "KYC stands for Know Your Customer. It is a set of regulations and procedures used by banks and financial institutions to verify the identity of their customers and assess the level of risk associated with doing business with them. The goal of KYC is to prevent money laundering, terrorist financing, and other financial crimes by ensuring that customers are who they claim to be and that their activities are legitimate.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 4,
+    "answer": "AML stands for Anti-Money Laundering. It refers to a set of regulations and laws designed to prevent and combat the laundering of illicit funds in the financial sector. The primary goal of AML is to identify, report, and prevent the use of financial systems for money laundering, terrorist financing, and other illicit activities.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 5,
+    "answer": "Abu Dhabi.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 6,
+    "answer": "AED",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 7,
+    "answer": "Negative.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 8,
+    "answer": "160",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 9,
+    "answer": "Thursday.",
+    "correct": true
+  },
+  {
+    "model": "llama3.2:3b-instruct-q5_K_M",
+    "id": 10,
+    "answer": "The email address is: hr.team@example.com",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 1,
+    "answer": "360",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 2,
+    "answer": "250",
+    "correct": false
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 3,
+    "answer": "KYC stands for \"Know Your Customer.\" It is a standard banking practice that requires financial institutions to verify the identity of their clients and assess their suitability, or risk profile, for a range of products and services. The process helps banks prevent fraud, money laundering, and terrorist financing. KYC typically involves collecting information such as name, address, date of birth, and identification documents like passports or driver's licenses.",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 4,
+    "answer": "In banking, AML stands for Anti-Money Laundering. Anti-Money Laundering refers to a set of laws, regulations, and procedures designed to prevent criminals from disguising illegally obtained funds as legitimate income. Banks and other financial institutions implement AML measures to detect and report suspicious activities that could indicate money laundering, terrorist financing, or other financial crimes. These measures include customer due diligence, record-keeping, reporting of suspicious transactions, and ongoing monitoring of customer activities.",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 5,
+    "answer": "Dubai",
+    "correct": false
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 6,
+    "answer": "AED",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 7,
+    "answer": "Negative.",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 8,
+    "answer": "160 hours",
+    "correct": true
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 9,
+    "answer": "Tuesday",
+    "correct": false
+  },
+  {
+    "model": "phi4-mini:latest",
+    "id": 10,
+    "answer": "The extracted email address from the text 'Please contact hr.team@example.com for details.' is hr.team@example.com.",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 1,
+    "answer": "360",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 2,
+    "answer": "1500",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 3,
+    "answer": "KYC stands for Know Your Customer. It is a process that financial institutions use to verify the identity of their customers and assess potential risks associated with illegal activities, such as money laundering and terrorist financing. The KYC process typically involves collecting and verifying personal information, including identification documents, address, and source of wealth. It is a crucial part of anti-money laundering (AML) and counter-terrorist financing (CTF) regulations.",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 4,
+    "answer": "In the context of banking, AML stands for Anti-Money Laundering. It refers to the legal procedures, regulations, and guidelines put in place to prevent banks and other financial institutions from being used to launder money obtained from illegal activities. These procedures aim to detect and deter money laundering and the financing of terrorism.",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 5,
+    "answer": "Abu Dhabi",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 6,
+    "answer": "AED (United Arab Emirates Dirham)",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 7,
+    "answer": "Negative",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 8,
+    "answer": "160",
+    "correct": true
+  },
+  {
+    "model": "mistral:latest",
+    "id": 9,
+    "answer": "Tuesday",
+    "correct": false
+  },
+  {
+    "model": "mistral:latest",
+    "id": 10,
+    "answer": "The email address in the text is 'hr.team@example.com'.",
+    "correct": true
+  }
+]

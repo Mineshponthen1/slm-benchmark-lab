@@ -1,0 +1,12 @@
+[
+  {"id": 1, "question": "What is 15% of 2,400? Reply with just the number.", "accept": ["360"]},
+  {"id": 2, "question": "A loan of 10,000 has simple interest of 5% per year. How much interest is paid after 3 years? Reply with just the number.", "accept": ["1500"]},
+  {"id": 3, "question": "What does KYC stand for in banking?", "accept": ["know your customer", "know your client"]},
+  {"id": 4, "question": "What does AML stand for in banking?", "accept": ["anti money laundering"]},
+  {"id": 5, "question": "What is the capital of the United Arab Emirates? Answer in one word.", "accept": ["abu dhabi"]},
+  {"id": 6, "question": "What currency is used in the UAE? Give only the 3-letter code.", "accept": ["aed"]},
+  {"id": 7, "question": "Is this feedback positive or negative: 'The onboarding process was slow and confusing.' Answer with one word.", "accept": ["negative"]},
+  {"id": 8, "question": "An employee works 8 hours a day, 5 days a week. How many hours do they work in 4 weeks? Reply with just the number.", "accept": ["160"]},
+  {"id": 9, "question": "If today is Monday, what day of the week will it be in 10 days? Answer with one word.", "accept": ["thursday"]},
+  {"id": 10, "question": "Extract the email address from this text: 'Please contact hr.team@example.com for details.'", "accept": ["hr.team@example.com"]}
+]
