@@ -10,6 +10,14 @@ WEEKEND = {5, 6}  # Python counts Monday as 0, so Saturday = 5 and Sunday = 6
 MISSING_WORDS = {"leave_type": "what type of leave you need", "dates": "which dates you need"}
 NUMBER_WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
                 "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10}
+TYPE_WORDS = {
+    "annual": ["annual", "vacation", "holiday"],
+    "sick": ["sick", "ill", "unwell", "doctor", "flu", "fever"],
+    "maternity": ["maternity"],
+    "paternity": ["paternity"],
+    "unpaid": ["unpaid", "without pay"],
+    "other": ["compassionate", "bereavement", "study", "hajj"],
+}
 
 
 class LeaveExtraction(BaseModel):
@@ -70,6 +78,15 @@ def number_is_mentioned(n: int, message: str) -> bool:
     digits = {int(d) for d in re.findall(r"\d+", text)}
     words = {NUMBER_WORDS[w] for w in re.findall(r"[a-z]+", text) if w in NUMBER_WORDS}
     return n in digits or n in words
+
+
+def leave_type_is_grounded(leave_type: str, message: str) -> bool:
+    text = message.lower()
+    words = set(re.findall(r"[a-z]+", text))
+    for keyword in TYPE_WORDS.get(leave_type, []):
+        if (" " in keyword and keyword in text) or keyword in words:
+            return True
+    return False
 
 
 def find_problems(ex: LeaveExtraction, message: str) -> list[str]:
@@ -165,6 +182,10 @@ def extract(message: str, model: str, temperature: float = 0, today: date | None
             ]
 
         if ex is not None:
+            if ex.leave_type is not None and not leave_type_is_grounded(ex.leave_type, message):
+                ex.leave_type = None
+                if "leave_type" not in ex.missing:
+                    ex.missing.append("leave_type")
             if ex.missing:
                 needed = " and ".join(MISSING_WORDS[m] for m in ex.missing)
                 return LeaveResult(status="needs_clarification", message=f"Please tell me {needed}.",

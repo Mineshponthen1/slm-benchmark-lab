@@ -107,10 +107,24 @@ def test_missing_info_asks_for_clarification(monkeypatch):
     assert len(calls) == 1
 
 
+def test_unstated_leave_type_asks_the_employee(monkeypatch):
+    calls = scripted(monkeypatch, [as_json(leave_type="unpaid", start_date="2026-10-19",
+                                           end_date="2026-10-20")])
+    r = leave.extract("Can I have leave on 19 and 20 October?", "m", today=TODAY)
+    assert r.status == "needs_clarification"
+    assert len(calls) == 1
+    assert "type of leave" in (r.message or "")
+
+
+def test_ill_does_not_match_inside_will():
+    assert not leave.leave_type_is_grounded("sick", "I will be away on Monday")
+    assert leave.leave_type_is_grounded("sick", "I am ill today")
+
+
 def test_invented_reason_fails_after_one_retry(monkeypatch):
     invented = as_json(leave_type="sick", start_date="2026-10-05", end_date="2026-10-06", reason="Flu")
     calls = scripted(monkeypatch, [invented, invented])
-    r = leave.extract("I need two days off from Monday", "m", today=TODAY)
+    r = leave.extract("I need two sick days off from Monday", "m", today=TODAY)
     assert r.status == "failed"
     assert r.attempts == 2
     assert len(calls) == 2
