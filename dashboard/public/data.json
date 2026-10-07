@@ -1,0 +1,75 @@
+{
+  "generated": "2026-10-07",
+  "hardware": "CPU-only laptop | 32 GB RAM | Intel Arc integrated graphics | Ollama running 100% on CPU",
+  "extraction_model": "llama3.2:3b-instruct-q4_K_M",
+  "models": [
+    {
+      "model": "llama3.2:3b-instruct-q4_K_M",
+      "short": "llama3.2 q4",
+      "tokens_per_s": 16.7,
+      "ttft_s": 0.19,
+      "memory_gb": 2.6,
+      "load_s": 4.8,
+      "quality_pct": 93
+    },
+    {
+      "model": "llama3.2:3b-instruct-q5_K_M",
+      "short": "llama3.2 q5",
+      "tokens_per_s": 15.3,
+      "ttft_s": 0.38,
+      "memory_gb": 2.9,
+      "load_s": 4.0,
+      "quality_pct": 90
+    },
+    {
+      "model": "phi4-mini:latest",
+      "short": "phi4-mini",
+      "tokens_per_s": 13.9,
+      "ttft_s": 0.26,
+      "memory_gb": 3.1,
+      "load_s": 5.0,
+      "quality_pct": 90
+    },
+    {
+      "model": "mistral:latest",
+      "short": "mistral 7B",
+      "tokens_per_s": 7.9,
+      "ttft_s": 0.46,
+      "memory_gb": 5.0,
+      "load_s": 7.4,
+      "quality_pct": 90
+    }
+  ],
+  "validity": {
+    "0.0": {
+      "First-try valid": 59,
+      "Not failed": 93,
+      "Correct": 73,
+      "Silently wrong": 7,
+      "Consistency": 100
+    },
+    "0.7": {
+      "First-try valid": 60,
+      "Not failed": 93,
+      "Correct": 69,
+      "Silently wrong": 7,
+      "Consistency": 83
+    }
+  },
+  "grounding": {
+    "before": {
+      "First-try valid": 52,
+      "Not failed": 93,
+      "Correct": 60,
+      "Silently wrong": 20,
+      "Consistency": 100
+    },
+    "after": {
+      "First-try valid": 59,
+      "Not failed": 93,
+      "Correct": 73,
+      "Silently wrong": 7,
+      "Consistency": 100
+    }
+  }
+}
