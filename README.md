@@ -1,6 +1,9 @@
 # SLM Benchmark Lab: Local AI Assistant
 
 ![tests](https://github.com/Mineshponthen1/slm-benchmark-lab/actions/workflows/tests.yml/badge.svg)
+![deploy dashboard](https://github.com/Mineshponthen1/slm-benchmark-lab/actions/workflows/pages.yml/badge.svg)
+
+**📊 Live dashboard: [mineshponthen1.github.io/slm-benchmark-lab](https://mineshponthen1.github.io/slm-benchmark-lab/)** (all results below, as interactive charts)
 
 Which small language model should a bank run on a **normal work laptop**, with no GPU, no cloud, and no data leaving the machine? And can a small model be made **reliable** enough to fill in real HR forms?
 
